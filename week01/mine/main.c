@@ -1,10 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-
+/* files at taurus.fis.agh.edu.pl
 #include "/opt/NR/numerical_recipes.c/nrutil.h"
 #include "/opt/NR/numerical_recipes.c/nrutil.c"
 #include "/opt/NR/numerical_recipes.c/gaussj.c"
+*/
+
+#include "../include/nrutil.h"
+#include "../include/nrutil.c"
+#include "../include/gaussj.c"
 
 #define N 400 // rozmiar macierzy A: NxN
 
@@ -47,7 +52,7 @@ int main(void) {
 		}
 		printf("\n");
 	}
-	*/
+*/
 //	Rozwiazanie ukladu rownan Ax=b - wywolanie procedury:
 	gaussj(A,N,b,1);
 
@@ -55,7 +60,7 @@ int main(void) {
 FILE *f = fopen("out.dat","w");
 for(int i=1; i<=N; ++i){
 	printf("%g\n",  b[i][1]); 
-	fprintf(f, "%lf\n", b[i][1]);
+	fprintf(f, "%lf %lf\n", (double)(i)/10, b[i][1]);
 }
 fclose(f);
 
