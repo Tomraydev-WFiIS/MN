@@ -60,7 +60,7 @@ int main(void) {
 FILE *f = fopen("out.dat","w");
 for(int i=1; i<=N; ++i){
 	printf("%g\n",  b[i][1]); 
-	fprintf(f, "%lf %lf\n", (double)(i)/10, b[i][1]);
+	fprintf(f, "%lf %lf\n", (double)(i)*h, b[i][1]);
 }
 fclose(f);
 
