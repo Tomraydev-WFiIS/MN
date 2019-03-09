@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<gsl/gsl_linalg.h>
+#include<gsl/gsl_linalg.h> // reuqires gsl installed
 #include<math.h>
 
 #define N 4
@@ -7,9 +7,9 @@
 void print_matrix(gsl_matrix *A, int m, int n){
     for(int i = 0; i < m; i++){
         for(int j = 0; j < n; j++){
-            printf("%6.4lf\t", gsl_matrix_get(A, i, j) );
+            printf("%6.2lf #", gsl_matrix_get(A, i, j) );
         }
-        printf("\n");
+        printf("#\n");
     }
     printf("\n\n");
 }
@@ -59,7 +59,7 @@ int main(void){
     printf("*****Upper Matrix*****\n");
     gsl_matrix *U = gsl_matrix_calloc(N, N);
     for(int i = 0; i < N; i++){
-        for(int j = i; j < N-i; j++){
+        for(int j = i; j < N; j++){
             gsl_matrix_set(U, i, j, gsl_matrix_get(A, i, j) );
         }
     }
