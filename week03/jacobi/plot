@@ -1,0 +1,10 @@
+#set terminal post enhanced colour solid font 20 
+set terminal png
+set out "wykres.png"
+set xlabel "t"
+set ylabel "x(t)"
+set yrange [-1:1]
+set grid
+# replot
+# set term ??
+plot "output.dat" w l t "beta = 0.4, F_0 = 0.1"

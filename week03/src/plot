@@ -1,7 +1,0 @@
-set terminal post enhanced colour solid font 20 
-set out "wykres.eps"
-set xlabel "t"
-set ylabel "x(t)"
-# replot
-# set term ??
-plot "output.dat" w l t "title"
