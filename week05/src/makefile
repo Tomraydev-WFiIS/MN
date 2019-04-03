@@ -8,6 +8,7 @@ $(NAME): $(OBJS)
 
 main.o: main.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
+
 			
 .PHONY: clean
 

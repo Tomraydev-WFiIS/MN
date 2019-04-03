@@ -1,0 +1,15 @@
+set title "Błąd bezwzględny przybliżenia wartości własnych macierzy A"
+set xlabel "Iteracja"
+set ylabel "Błąd bezwzględny"
+set logscale y 10;
+set format y "%g"
+
+plot "eigenvalues.dat" using 1:2 title "λ_{1 ERR}" with lines, \
+     "eigenvalues.dat" using 1:3 title "λ_{2 ERR}" with lines, \
+     "eigenvalues.dat" using 1:4 title "λ_{3 ERR}" with lines, \
+     "eigenvalues.dat" using 1:5 title "λ_{4 ERR}" with lines, \
+     "eigenvalues.dat" using 1:6 title "λ_{5 ERR}" with lines, \
+     "eigenvalues.dat" using 1:7 title "λ_{6 ERR}" with lines, \
+     "eigenvalues.dat" using 1:8 title "λ_{7 ERR}" with lines
+
+pause -1;
