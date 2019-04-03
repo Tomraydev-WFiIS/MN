@@ -1,0 +1,60 @@
+set term png size 500,460
+set view map
+set pm3d interpolate 4,4
+set size square
+set xlabel "x"
+set ylabel "y"
+set cblabel "{/Symbol y} (x,y)"
+
+
+str3 = "0.00093821"
+str4 = "0.00233505"
+str5 = "0.00233506"
+str6 = "0.00373200"
+str7 = "0.00462842"
+str8 = "0.00462853"
+str9 = "0.00602519"
+str10 = "0.00602522"
+str11 = "0.00776708"
+str12 = "0.00776711"
+
+
+set out 'vec_' . 3 . '.png'
+set title "{/Symbol y}_" . 1 . " (x,y), E = ". str3
+splot 'dane.dat' u 1:2:3 w pm3d notitle
+
+set out 'vec_' . 4 . '.png'
+set title "{/Symbol y}_" . 2 . " (x,y), E = ". str4
+splot 'dane.dat' u 1:2:4 w pm3d notitle
+
+set out 'vec_' . 5 . '.png'
+set title "{/Symbol y}_" . 3 . " (x,y), E = ". str5
+splot 'dane.dat' u 1:2:5 w pm3d notitle
+
+set out 'vec_' . 6 . '.png'
+set title "{/Symbol y}_" . 4 . " (x,y), E = ". str6
+splot 'dane.dat' u 1:2:6 w pm3d notitle
+
+set out 'vec_' . 7 . '.png'
+set title "{/Symbol y}_" . 5 . " (x,y), E = ". str7
+splot 'dane.dat' u 1:2:7 w pm3d notitle
+
+set out 'vec_' . 8 . '.png'
+set title "{/Symbol y}_" . 6 . " (x,y), E = ". str8
+splot 'dane.dat' u 1:2:8 w pm3d notitle
+
+set out 'vec_' . 9 . '.png'
+set title "{/Symbol y}_" . 7 . " (x,y), E = ". str9
+splot 'dane.dat' u 1:2:9 w pm3d notitle
+
+set out 'vec_' . 10 . '.png'
+set title "{/Symbol y}_" . 8 . " (x,y), E = ". str10
+splot 'dane.dat' u 1:2:10 w pm3d notitle
+
+set out 'vec_' . 11 . '.png'
+set title "{/Symbol y}_" . 9 . " (x,y), E = ". str11
+splot 'dane.dat' u 1:2:11 w pm3d notitle
+
+set out 'vec_' . 12 . '.png'
+set title "{/Symbol y}_" . 10 . " (x,y), E = ". str12
+splot 'dane.dat' u 1:2:12 w pm3d notitle
