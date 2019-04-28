@@ -14,6 +14,7 @@ main.o: main.c
 clean:
 	rm -f *o
 	rm -f ./$(NAME)
+	rm ./*.dat
 					
 run:
 	./main
