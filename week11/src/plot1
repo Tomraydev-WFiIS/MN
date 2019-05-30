@@ -1,3 +1,22 @@
-plot "niezaburzony.dat" using 1:2 w p title "niezaburzony", \
-    "niezaburzony.dat" using 1:3 w l title "splot";
-pause -1;
+set terminal png
+set grid
+set xlabel "t"
+set ylabel "f(t)"
+
+#set terminal qt 0
+set output "../plots/niezaburzony_8"
+set title "sygnał niezaburzony, k = 8"
+plot "niezaburzony.dat" i 0 using 1:2 w p title "niezaburzony", \
+    "niezaburzony.dat" i 0 using 1:3 w l lt 7 lw 3 title "splot";
+
+#set terminal qt 1
+set output "../plots/niezaburzony_10"
+set title "sygnał niezaburzony, k = 10"
+plot "niezaburzony.dat" i 1 using 1:2 w p title "niezaburzony", \
+    "niezaburzony.dat" i 1 using 1:3 w l lt 7 lw 3 title "splot";
+
+#set terminal qt 2
+set output "../plots/niezaburzony_12"
+set title "sygnał niezaburzony, k = 12
+plot "niezaburzony.dat" i 2 using 1:2 w p title "niezaburzony", \
+    "niezaburzony.dat" i 2 using 1:3 w l lt 7 lw 3 title "splot";
