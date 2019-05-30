@@ -1,0 +1,3 @@
+plot "zaburzony.dat" using 1:2 w p title "zaburzony", \
+    "zaburzony.dat" using 1:3 w l title "splot";
+pause -1;
