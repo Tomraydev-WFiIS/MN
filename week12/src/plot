@@ -1,0 +1,8 @@
+set grid
+set xlabel "w"
+set ylabel "diff"
+set title "Różnica pomiędzy kolejnymi przybliżeniami całki: Metoda trapezowa"
+
+plot "trapezoid.dat" i 1 using 1:2 w l title "1 kolumna", \
+    "trapezoid.dat" i 1 using 1:3 w l title "diagonala";
+pause -1;
